@@ -1,0 +1,99 @@
+.unslider {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.unslider-wrap {
+	position: relative;
+}
+
+.unslider-wrap.unslider-carousel li {
+	float: left;
+}
+
+.unslider-vertical > ul { 
+	height: 100%;
+}
+
+.unslider-vertical li {
+	float: none;
+	width: 100%;
+}
+
+.unslider-fade {
+	position: relative;
+}
+
+.unslider-fade .unslider-wrap li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 8;
+}
+
+.unslider-fade .unslider-wrap li.unslider-active {
+	z-index: 10;
+}
+
+.unslider li,.unslider ol,.unslider ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.unslider-arrow {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 2;
+	cursor: pointer;
+	color: #474747;
+	font-weight: bold;
+	background-color: #EEE;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 25px;
+	border-top: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+	border-top-right-radius: 5px;
+}
+
+.unslider-arrow:hover {
+	color: #4169E1;
+}
+
+.unslider-arrow.next {
+	left: auto;
+	right: 0px;
+	border-right: 0px;
+	border-left: 1px solid #BBB;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+}
+
+.unslider-nav ol {
+	list-style: none;
+	text-align: center;
+}
+
+.unslider-nav ol li {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 4px;
+	background: #AAA;
+	border-radius: 10px;
+	overflow: hidden;
+	text-indent: -999em;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+
+.unslider-nav ol li.unslider-active {
+	background: #4169E1;
+	cursor: default;
+}
