@@ -95,49 +95,49 @@ var router = new Navigo();
 console.log(router);
 router
 .on({
-	'/board': function () {
+	'board': function () {
 		$("#content").load("pages/board.html");
 	},
-	'/news': function () {
+	'news': function () {
 		$("#content").load("pages/news.html");
 	},
-	'/contact': function () {
+	'contact': function () {
 		$("#content").load("pages/contact.html");
 	},
-	'/directions': function () {
+	'directions': function () {
 		$("#content").load("pages/directions.html");
 	},
-	'/game_schedule': function () {
+	'game_schedule': function () {
 		$("#content").load("pages/game_schedule.html");
 	},
-	'/goals': function () {
+	'goals': function () {
 		$("#content").load("pages/goals.html");
 	},
-	'/important_articles': function () {
+	'important_articles': function () {
 		$("#content").load("pages/important_articles.html");
 	},
-	'/links': function () {
+	'links': function () {
 		$("#content").load("pages/links.html");
 	},
-	'/parent_info': function () {
+	'parent_info': function () {
 		$("#content").load("pages/parent_info.html");
 	},
-	'/practice_schedule': function () {
+	'practice_schedule': function () {
 		$("#content").load("pages/practice_schedule.html");
 	},
-	'/registration': function () {
+	'registration': function () {
 		$("#content").load("pages/registration.html");
 	},
-	'/rules': function () {
+	'rules': function () {
 		$("#content").load("pages/rules.html");
 	},
-	'/sponsors': function () {
+	'sponsors': function () {
 		$("#content").load("pages/sponsors.html");
 	},
-	'/opportunities': function () {
+	'opportunities': function () {
 		$("#content").load("pages/opportunities.html");
 	},
-	'/': function () {
+	'*': function () {
 		$("#content").load("pages/home.html");
 	},
 })
