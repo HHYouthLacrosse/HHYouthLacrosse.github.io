@@ -95,9 +95,6 @@ var router = new Navigo();
 console.log(router);
 router
 .on({
-	'/': function () {
-		$("#content").load("pages/home.html");
-	},
 	'/board': function () {
 		$("#content").load("pages/board.html");
 	},
@@ -139,7 +136,10 @@ router
 	},
 	'/opportunities': function () {
 		$("#content").load("pages/opportunities.html");
-	}
+	},
+	'/': function () {
+		$("#content").load("pages/home.html");
+	},
 })
 .resolve();
 
