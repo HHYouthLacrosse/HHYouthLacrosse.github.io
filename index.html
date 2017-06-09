@@ -42,59 +42,6 @@
 	<script src="jquery.js"></script>
 	<script src="navigo.js"></script>
 	<script src="unslider-master/unslider.js"></script>
-	<script>
-	var router = new Navigo();
-	router
-	.on({
-		'/board': function () {
-			$("#content").load("pages/board.html");
-		},
-		'/news': function () {
-			$("#content").load("pages/news.html");
-		},
-		'/contact': function () {
-			console.log("Got Here")
-			$("#content").load("pages/contact.html");
-		},
-		'/directions': function () {
-			$("#content").load("pages/directions.html");
-		},
-		'/game_schedule': function () {
-			$("#content").load("pages/game_schedule.html");
-		},
-		'/goals': function () {
-			$("#content").load("pages/goals.html");
-		},
-		'/important_articles': function () {
-			$("#content").load("pages/important_articles.html");
-		},
-		'/links': function () {
-			$("#content").load("pages/links.html");
-		},
-		'/parent_info': function () {
-			$("#content").load("pages/parent_info.html");
-		},
-		'/practice_schedule': function () {
-			$("#content").load("pages/practice_schedule.html");
-		},
-		'/registration': function () {
-			$("#content").load("pages/registration.html");
-		},
-		'/rules': function () {
-			$("#content").load("pages/rules.html");
-		},
-		'/sponsors': function () {
-			$("#content").load("pages/sponsors.html");
-		},
-		'/opportunities': function () {
-			$("#content").load("pages/opportunities.html");
-		},
-		'/': function () {
-			$("#content").load("pages/home.html");
-		}
-	})
-	.resolve();
-	</script>
 </head>
 <body>
 	<div id="wrapper">
@@ -134,7 +81,7 @@
 			  <a href="registration"><div class="sidebar-item x-grid-a s-grid-12"> Registration </div></a>
 			  <a href="rules"><div class="sidebar-item x-grid-a s-grid-12"> Rules of Lacrosse </div></a>
 			  <a href="sponsors"><div class="sidebar-item x-grid-a s-grid-12"> Sponsors </div></a>
-			  <a href="opportunites"><div class="sidebar-item x-grid-a s-grid-12"> Fall Opportunites </div></a>
+			  <a href="opportunities"><div class="sidebar-item x-grid-a s-grid-12"> Fall Opportunites </div></a>
 			</div>
 		</div>
 		<div id="content" class="x-grid-12 s-grid-8 m-grid-9 nopad">
@@ -144,6 +91,57 @@
 </html>
 
 <script>
+var router = new Navigo();
+router
+.on({
+	'board': function () {
+		$("#content").load("pages/board.html");
+	},
+	'news': function () {
+		$("#content").load("pages/news.html");
+	},
+	'contact': function () {
+		$("#content").load("pages/contact.html");
+	},
+	'directions': function () {
+		$("#content").load("pages/directions.html");
+	},
+	'game_schedule': function () {
+		$("#content").load("pages/game_schedule.html");
+	},
+	'goals': function () {
+		$("#content").load("pages/goals.html");
+	},
+	'important_articles': function () {
+		$("#content").load("pages/important_articles.html");
+	},
+	'links': function () {
+		$("#content").load("pages/links.html");
+	},
+	'parent_info': function () {
+		$("#content").load("pages/parent_info.html");
+	},
+	'practice_schedule': function () {
+		$("#content").load("pages/practice_schedule.html");
+	},
+	'registration': function () {
+		$("#content").load("pages/registration.html");
+	},
+	'rules': function () {
+		$("#content").load("pages/rules.html");
+	},
+	'sponsors': function () {
+		$("#content").load("pages/sponsors.html");
+	},
+	'opportunities': function () {
+		$("#content").load("pages/opportunities.html");
+	},
+	'*': function () {
+		$("#content").load("pages/home.html");
+	}
+})
+.resolve();
+
 	$("#sidebar-xs_display").click(function() {
 		$("#sidebar-item_holder").toggle();
 		$('html, body').animate({
