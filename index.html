@@ -81,7 +81,7 @@
 			  <a href="registration"><div class="sidebar-item x-grid-a s-grid-12"> Registration </div></a>
 			  <a href="rules"><div class="sidebar-item x-grid-a s-grid-12"> Rules of Lacrosse </div></a>
 			  <a href="sponsors"><div class="sidebar-item x-grid-a s-grid-12"> Sponsors </div></a>
-			  <a href="opportunities"><div class="sidebar-item x-grid-a s-grid-12"> Fall Opportunites </div></a>
+			  <a href="opportunities"><div class="sidebar-item x-grid-a s-grid-12"> Off-Season Opportunites </div></a>
 			</div>
 		</div>
 		<div id="content" class="x-grid-12 s-grid-8 m-grid-9 nopad">
@@ -134,15 +134,12 @@
 		'opportunities': function () {
 			$("#content").load("pages/opportunities.html");
 		},
-		'index': function () {
-			$("#content").load("pages/home.html");
-		}
-		'home': function () {
-			$("#content").load("pages/home.html");
-		}
 		'*': function () {
 			$("#content").load("pages/home.html");
 		}
+	})
+	.notFound(function () {
+		$("#content").load("pages/home.html");
 	})
 	.resolve();
 
