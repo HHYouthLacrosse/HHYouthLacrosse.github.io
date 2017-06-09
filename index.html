@@ -1,7 +1,35 @@
 <html>
-<html lang="en">
 <head>
-	<title>Home - HH Lacrosse</title>
+	<title>HH Lacrosse</title>
+	<script type="text/javascript">
+		// Single Page Apps for GitHub Pages
+		// https://github.com/rafrex/spa-github-pages
+		// Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+		// ----------------------------------------------------------------------
+		// This script checks to see if a redirect is present in the query string
+		// and converts it back into the correct url and adds it to the
+		// browser's history using window.history.replaceState(...),
+		// which won't cause the browser to attempt to load the new url.
+		// When the single page app is loaded further down in this file,
+		// the correct url will be waiting in the browser's history for
+		// the single page app to route accordingly.
+		(function(l) {
+			if (l.search) {
+				var q = {};
+				l.search.slice(1).split('&').forEach(function(v) {
+					var a = v.split('=');
+					q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+				});
+				if (q.p !== undefined) {
+					 window.history.replaceState(null, null,
+						l.pathname.slice(0, -1) + (q.p || '') +
+						(q.q ? ('?' + q.q) : '') +
+						l.hash
+					);
+				}
+			}
+		}(window.location))
+	</script>
 	<link type="text/css" rel="stylesheet" href="css/framework.css"/>
 	<link type="text/css" rel="stylesheet" href="css/base.css"/>
 	<link type="text/css" rel="stylesheet" href="css/individual.css"/>
@@ -11,9 +39,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="description" content="Horseheads Youth Lacrosse">
 	<meta name="keywords" content="Horseheads Lacrosse,Horseheads Youth Lacrosse,Youth Lacrosse,HH Lax">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"> </script>
-	<script src="unslider-master/unslider.js"> </script>
+	<script src="jquery.js"></script>
+	<script src="navigo.js"></script>
+	<script src="unslider-master/unslider.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -33,77 +61,91 @@
 		</div>
 		<div id="sidebar" class="x-grid-12 s-grid-4 m-grid-3 nopad">
 			<div id="sidebar-xs_display">
-				<img src="images/xs-menu-display.png">
+			  <img src="images/xs-menu-display.png">
 			</div>
 			<div id="sidebar-logo" class="x-grid-12">
-				<img src="images/hh_lax_logo.png">
+			  <img src="images/hh_lax_logo.png">
 			</div>
 			<div id="sidebar-item_holder" class="x-grid-12">
-				<a href="index.html"><div class="sidebar-item-active x-grid-a s-grid-12"> Home </div></a>
-				<a href="board.html"><div class="sidebar-item x-grid-a s-grid-12"> Board Members </div></a>
-				<a href="news.html"><div class="sidebar-item x-grid-a s-grid-12"> Club News </div></a>
-				<a href="contact.html"><div class="sidebar-item x-grid-a s-grid-12"> Contact </div></a>
-				<a href="directions.html"><div class="sidebar-item x-grid-a s-grid-12"> Field Directions </div></a>
-				<a href="game_schedule.html"><div class="sidebar-item x-grid-a s-grid-12"> Game Schedules </div></a>
-				<a href="goals.html"><div class="sidebar-item x-grid-a s-grid-12"> Goals </div></a>
-				<a href="important_articles.html"><div class="sidebar-item x-grid-a s-grid-12"> Important Articles </div></a>
-				<a href="links.html"><div class="sidebar-item x-grid-a s-grid-12"> Lax Links </div></a>
-				<a href="parent_info.html"><div class="sidebar-item x-grid-a s-grid-12"> Parent Information </div></a>
-				<a href="practice_schedule.html"><div class="sidebar-item x-grid-a s-grid-12"> Practice Schedules </div></a>
-				<a href="registration.html"><div class="sidebar-item x-grid-a s-grid-12"> Registration </div></a>
-				<a href="rules.html"><div class="sidebar-item x-grid-a s-grid-12"> Rules of Lacrosse </div></a>
-				<a href="sponsors.html"><div class="sidebar-item x-grid-a s-grid-12"> Sponsors </div></a>
-				<a href="opportunites.html"><div class="sidebar-item x-grid-a s-grid-12"> Fall Opportunites </div></a>
+			  <a href="index.html"><div class="sidebar-item-active x-grid-a s-grid-12"> Home </div></a>
+			  <a href="board.html"><div class="sidebar-item x-grid-a s-grid-12"> Board Members </div></a>
+			  <a href="news.html"><div class="sidebar-item x-grid-a s-grid-12"> Club News </div></a>
+			  <a href="contact.html"><div class="sidebar-item x-grid-a s-grid-12"> Contact </div></a>
+			  <a href="directions.html"><div class="sidebar-item x-grid-a s-grid-12"> Field Directions </div></a>
+			  <a href="game_schedule.html"><div class="sidebar-item x-grid-a s-grid-12"> Game Schedules </div></a>
+			  <a href="goals.html"><div class="sidebar-item x-grid-a s-grid-12"> Goals </div></a>
+			  <a href="important_articles.html"><div class="sidebar-item x-grid-a s-grid-12"> Important Articles </div></a>
+			  <a href="links.html"><div class="sidebar-item x-grid-a s-grid-12"> Lax Links </div></a>
+			  <a href="parent_info.html"><div class="sidebar-item x-grid-a s-grid-12"> Parent Information </div></a>
+			  <a href="practice_schedule.html"><div class="sidebar-item x-grid-a s-grid-12"> Practice Schedules </div></a>
+			  <a href="registration.html"><div class="sidebar-item x-grid-a s-grid-12"> Registration </div></a>
+			  <a href="rules.html"><div class="sidebar-item x-grid-a s-grid-12"> Rules of Lacrosse </div></a>
+			  <a href="sponsors.html"><div class="sidebar-item x-grid-a s-grid-12"> Sponsors </div></a>
+			  <a href="opportunites.html"><div class="sidebar-item x-grid-a s-grid-12"> Fall Opportunites </div></a>
 			</div>
 		</div>
 		<div id="content" class="x-grid-12 s-grid-8 m-grid-9 nopad">
-			<div id="contentbox_home" class="x-grid-10 x-grid-offset-1 l-grid-8 l-grid-offset-2">
-				<div id="image-carousel" class="unslider">
-					<ul>
-						<li class="home_slider-image"><img src="images/slider1.JPG"></li>
-						<li class="home_slider-image"><img src="images/slider2.JPG"></li>
-						<li class="home_slider-image"><img src="images/slider3.jpg"></li>
-						<li class="home_slider-image"><img src="images/slider4.jpg"></li>
-						<li class="home_slider-image"><img src="images/slider5.jpg"></li>
-						<li class="home_slider-image"><img src="images/slider6.jpg"></li>
-					</ul>
-				</div>
-			</div>
-
-			<div id="contentbox_home" class="x-grid-10 x-grid-offset-1 l-grid-8 l-grid-offset-2">
-				<div id="home_quote" class="x-grid-12">
-					Building a love of lacrosse one child, one stick, one experience at a time.
-				</div>
-
-				<div id="divider"></div>
-
-				<div id="home_image-container" class="x-grid-12">
-					<img src="images/team.jpg">
-				</div>
-
-				<div id="home_info" class="x-grid-12">
-					The Horseheads Youth Lacrosse Club is an organization which provides an opportunity for boys and girls
-					in grades K-6  to play in a competitive spring field lacrosse league.
-					<br><br>
-					The Club is in its tenth year of existence and is a member of the Finger Lakes Lacrosse League.  Club teams travel and play games throughout the Finger Lakes region including Elmira, Bath, Geneva, Waterloo, Midlakes, Seneca
-					Falls, Penn Yan, Newark, and Palmyra-Macedonia. We have also established relationships with other leagues throughout western (Rochester) and Central NY (Cortland/Ithaca).
-				</div>
-			</div>
 		</div>
 	</div>
 </body>
 </html>
 
 <script>
+	var router = new Navigo(null, false, '#!');
+	router
+  .on({
+		'/': function () {
+			$("#content").load("pages/home.html");
+    },
+		'/board': function () {
+			$("#content").load("pages/board.html");
+    },
+		'/news': function () {
+			$("#content").load("pages/news.html");
+    },
+		'/contact': function () {
+			$("#content").load("pages/contact.html");
+    },
+		'/directions': function () {
+			$("#content").load("pages/directions.html");
+    },
+		'/game_schedule': function () {
+			$("#content").load("pages/game_schedule.html");
+    },
+		'/goals': function () {
+			$("#content").load("pages/goals.html");
+    },
+		'/important_articles': function () {
+			$("#content").load("pages/important_articles.html");
+    },
+		'/links': function () {
+			$("#content").load("pages/links.html");
+    },
+		'/parent_info': function () {
+			$("#content").load("pages/parent_info.html");
+    },
+		'/practice_schedule': function () {
+			$("#content").load("pages/practice_schedule.html");
+    },
+		'/registration': function () {
+			$("#content").load("pages/registration.html");
+    },
+		'/rules': function () {
+			$("#content").load("pages/rules.html");
+    },
+		'/sponsors': function () {
+			$("#content").load("pages/sponsors.html");
+    },
+		'/opportunities': function () {
+			$("#content").load("pages/opportunities.html");
+    }
+  })
+  .resolve();
+
 	$("#sidebar-xs_display").click(function() {
 		$("#sidebar-item_holder").toggle();
 		$('html, body').animate({
 			scrollTop: $("#sidebar-item_holder").offset().top
 		}, 2000);
-	});
-
-	$('#image-carousel').unslider({
-		autoplay: true,
-		delay: 4000
 	});
 </script>

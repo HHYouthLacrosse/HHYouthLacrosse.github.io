@@ -1,0 +1,32 @@
+<div id="contentbox_contact" class="x-grid-10 x-grid-offset-1 l-grid-8 l-grid-offset-2">
+	<div id="contact_title" class="title_large x-grid-12">
+		Contact Form
+	</div>
+	<form action="" method="post" enctype="text/plain">
+		<div class="contact_input--title x-grid-12">First Name:</div>
+		<input class="x-grid-12" type="text" name="first" placeholder="Your First Name Here" required>
+
+		<div class="contact_input--title x-grid-12">Last Name:</div>
+		<input class="x-grid-12" type="text" name="last" placeholder="Your Last Name Here" required>
+
+		<div class="contact_input--title x-grid-12">Comment:</div>
+		<textarea class="x-grid-12" type="text" name="comment" placeholder="Your Comment Here" required></textarea>
+
+		<button name="submit" type="submit" class="x-grid-12 s-grid-8 s-grid-offset-2 m-grid-6 m-grid-offset-3">Submit</button>
+		<div class="contact_submit--notice x-grid-12 s-grid-8 s-grid-offset-2 m-grid-6 m-grid-offset-3 nopad">Please Note: All fields required.</div>
+	</form>
+</div>
+
+<script>
+	$("[name=submit]").click(function() {
+		var first = $("[name=first]").val().trim();
+		var last = $("[name=last]").val().trim();
+		var comment = $("[name=comment]").val().trim();
+
+		if ((first != "") && (last != "") && (comment != "")) {
+			$(location).attr("href", "mailto:HorseheadsYouthLacrosse@gmail.com"
+										 + "?subject=" + escape(first + " " + last)
+										 + "&body=" + escape(comment));
+		} else { }
+	});
+</script>
